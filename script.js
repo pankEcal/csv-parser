@@ -19,16 +19,18 @@ const parseCsv = () => {
 	fs.createReadStream(csvFile)
 		.pipe(parse({ delimeter: "," }))
 		.on("data", function (row) {
-			if (row[1].length) {
-				const applicationName = String(row[1]).replace(/[\r\n]+/gm, "");
-				const apiLink = String(row[2]).replace(/[\r\n]+/gm, "");
-				const requestParams = String(row[3]).replace(/[\r\n]+/gm, "");
+			const applicationName = String(row[1]).replace(/[\r\n]+/gm, "");
+			const apiLink = String(row[2]).replace(/[\r\n]+/gm, "");
+			const requestParams = String(row[3]).replace(/[\r\n]+/gm, "");
+
+			if (applicationName.length) {
 				let rowData = {
 					applicationName,
 					apiLink,
 					...{ requestMethod: "POST" },
 					requestParams,
 				};
+
 				apis.push(rowData);
 			}
 		})
