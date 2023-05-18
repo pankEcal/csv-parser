@@ -13,20 +13,17 @@ const finalData = [];
 
 const parseCsv = () => {
 	fs.createReadStream(csvFile)
-		// .pipe(parse({ delimiter: ",", relax_quotes: true }))
 		.pipe(parse({ delimeter: "," }))
 		.on("data", function (row) {
 			if (row[1].length) {
-				const applicationName = row[1];
-				const apiLink = row[2];
-				const requestParam = row[4];
+				const applicationName = String(row[1]).replace(/[\r\n]+/gm, "");
+				const apiLink = String(row[2]).replace(/[\r\n]+/gm, "");
+				const requestParam = String(row[4]).replace(/[\r\n]+/gm, "");
 				let rowData = { applicationName, apiLink, requestParam };
-				// Object.assign(finalData, rowData);
 				finalData.push(rowData);
 			}
 		})
 		.on("end", () => {
-			// application name, apiLink, requestParams
 			console.log(finalData);
 		});
 };
