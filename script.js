@@ -21,22 +21,26 @@ const parseCsv = () => {
 		.on("data", function (row) {
 			const applicationName = row[1];
 			const apiLink = row[2];
-			const requestParams = row[3];
+			let requestParams = row[3];
 
-			if (applicationName.length) {
-				let rowData = {
-					applicationName,
-					apiLink,
-					...{ requestMethod: "POST" },
-					requestParams,
-				};
+			try {
+				requestParams = JSON.parse(requestParams);
 
-				apis.push(rowData);
-			}
+				if (applicationName.length) {
+					let rowData = {
+						applicationName,
+						apiLink,
+						...{ requestMethod: "POST" },
+						requestParams,
+					};
+
+					apis.push(rowData);
+				}
+			} catch (error) {}
 		})
 		.on("end", () => {
 			Object.assign(requestObj, { apis: apis });
-			console.log(requestObj);
+			console.log(JSON.stringify(requestObj));
 		});
 };
 
