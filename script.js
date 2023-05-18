@@ -9,7 +9,11 @@ const csvFile = path.join(__dirname, "./uploads/", "csvfile.csv");
 const workBook = XLSX.readFile(xlsxFile);
 XLSX.writeFile(workBook, csvFile, { bookType: "csv" });
 
-const finalData = [];
+const apis = [];
+const requestObj = {
+	applicationName: "Bike Intell",
+	baseUrl: "https://evaai.enginecal.com/",
+};
 
 const parseCsv = () => {
 	fs.createReadStream(csvFile)
@@ -18,13 +22,18 @@ const parseCsv = () => {
 			if (row[1].length) {
 				const applicationName = String(row[1]).replace(/[\r\n]+/gm, "");
 				const apiLink = String(row[2]).replace(/[\r\n]+/gm, "");
-				const requestParam = String(row[4]).replace(/[\r\n]+/gm, "");
-				let rowData = { applicationName, apiLink, requestParam };
-				finalData.push(rowData);
+				const requestParams = String(row[3]).replace(/[\r\n]+/gm, "");
+				let rowData = {
+					applicationName,
+					apiLink,
+					...{ requestMethod: "POST" },
+					requestParams,
+				};
+				apis.push(rowData);
 			}
 		})
 		.on("end", () => {
-			console.log(finalData);
+			Object.assign(requestObj, { apis: apis });
 		});
 };
 
