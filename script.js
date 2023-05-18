@@ -19,9 +19,9 @@ const parseCsv = () => {
 	fs.createReadStream(csvFile)
 		.pipe(parse({ delimeter: "," }))
 		.on("data", function (row) {
-			const applicationName = String(row[1]).replace(/[\r\n]+/gm, "");
-			const apiLink = String(row[2]).replace(/[\r\n]+/gm, "");
-			const requestParams = String(row[3]).replace(/[\r\n]+/gm, "");
+			const applicationName = row[1];
+			const apiLink = row[2];
+			const requestParams = row[3];
 
 			if (applicationName.length) {
 				let rowData = {
@@ -36,6 +36,7 @@ const parseCsv = () => {
 		})
 		.on("end", () => {
 			Object.assign(requestObj, { apis: apis });
+			console.log(requestObj);
 		});
 };
 
