@@ -15,13 +15,15 @@ const requestObj = {
 	baseUrl: "https://evaai.enginecal.com/",
 };
 
+const parserConfig = { delimeter: ",", from_line: 4, info: true, trim: true };
+
 const parseCsv = () => {
 	fs.createReadStream(csvFile)
-		.pipe(parse({ delimeter: "," }))
-		.on("data", function (row) {
-			const applicationName = row[1];
-			const apiLink = row[2];
-			let requestParams = row[3];
+		.pipe(parse(parserConfig))
+		.on("data", function ({ info, record }) {
+			const applicationName = record[1];
+			const apiLink = record[2];
+			let requestParams = record[3];
 
 			try {
 				requestParams = JSON.parse(requestParams);
@@ -36,7 +38,9 @@ const parseCsv = () => {
 
 					apis.push(rowData);
 				}
-			} catch (error) {}
+			} catch (error) {
+				console.log(`skipping line ${record[0]}. Couldn't process.`);
+			}
 		})
 		.on("end", () => {
 			Object.assign(requestObj, { apis: apis });
