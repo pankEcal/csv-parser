@@ -1,3 +1,6 @@
+# confidential folders
+uploads/
+
 # Logs
 logs
 *.log
