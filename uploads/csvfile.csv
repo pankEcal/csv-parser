@@ -1,0 +1,211 @@
+﻿BikeIntell API Report,,,,,,,
+Base URL:- https://evaai.enginecal.com/,,,,,,,
+Sl No,API Name,API Link,Request,Response,Comments,Status,Status after fixing
+1,User Login Check,core/v1/bike-intell/checklogin,"{""u"":""saurabh.singh@enginecal.com"",""p"":""123456""}","{
+    ""success"": true,
+    ""userTypeId"": ""636f0a3a286eee60431ac912"",
+    ""userType"": ""Bluetooth User"",
+    ""deviceName"": ""saurabh"",
+    ""deviceID"": ""56d788cdc641eeA"",
+    ""email"": ""saurabh.singh@enginecal.com"",
+    ""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbGFnIjoxLCJ1bG9jYXRpb24iOm51bGwsInN0YXR1cyI6MSwiY3JlYXRlZF9hdCI6IjIwMjMtMDEtMTdUMDU6NTE6MzcuMDcwWiIsInVwZGF0ZWRfYXQiOiIyMDIzLTAxLTE3VDA1OjUxOjM3LjA3MFoiLCJfaWQiOiI2M2M2NDdmMGNlMzYwNmU4ZDI2ZTA3MTYiLCJlbWFpbCI6InNhdXJhYmguc2luZ2hAZW5naW5lY2FsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJGIwbUFsVm5ZU3RieUZyM0RFdTllT2UzSTV4U3NxTmxqR3VJQVJMOEt2SlZuYU9scWZzYnV5IiwidW5hbWUiOiJzYXVyYWJoIiwiZGV2aWNlIjp7ImRlc2NyaXB0aW9uIjoic2F1cmFiaCIsInN0YXR1cyI6MSwiZGV2dHlwZSI6MSwiZHRjdiI6W10sImxhdGl0dWRlIjoxMi45MjYxMDcxLCJsb25naXR1ZGUiOjc3LjU5Njk1MjksImFsdCI6ODQ4LCJvcGVyYXRvcl91cGRhdGUiOjEsImNhbGliX3VwZGF0ZSI6MCwiZGV2X2NtZF9zdGF0dXMiOjAsImNyZWF0ZWRfYXQiOiIyMDIzLTAxLTE3VDA1OjUxOjM3LjE1NloiLCJ1cGRhdGVkX2F0IjoiMjAyMy0wMy0yOVQxMzo0NjoxOC40NTJaIiwiX2lkIjoiNjNjNjQ3ZWZjZTM2MDZkMTFmNmUwNzEwIiwibmFtZSI6InNhdXJhYmgiLCJwYXJ0bmVyIjoiNjBlN2RmNjVhMmNkYTQ3NzFiYWE0ODhkIiwiZGV2aWNlX2lkIjoiNTZkNzg4Y2RjNjQxZWVBIiwiX192IjowfSwidW1vYiI6IjgwNTAzMTQ5MSIsInBhcnRuZXIiOnsiZmxhZyI6MSwidWxvY2F0aW9uIjoiZWUiLCJzdGF0dXMiOjEsImNyZWF0ZWRfYXQiOiIyMDIxLTA3LTA5VDA1OjExOjMwLjc0OVoiLCJ1cGRhdGVkX2F0IjoiMjAyMS0wNy0wOVQwNToxMTozMC43NDlaIiwiX2lkIjoiNjBlN2RmNjVhMmNkYTQ3NzFiYWE0ODhkIiwidW5hbWUiOiJwYXJ0bmVyIFRWUyBIb3N1ciIsInVtb2IiOiIxMjM0NTYiLCJlbWFpbCI6InB0dnNAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkRU5rWDFEWjF1aTJOd2lrVzZiSDVLLklqeVJ1bzBFRG9BSElCQVYzVGY5RWJrNmtLYjVaM3kiLCJkZXZpY2UiOm51bGwsInBhcnRuZXIiOm51bGwsInV0eXBlIjoiNjBlN2RmMWZhMmNkYTQwNTI3YWE0ODdmIiwiX192IjowLCJwbGFudF9pZCI6bnVsbCwidWNhdGVnb3J5IjoiNjBjNzFjM2VhZDhkOGY0MzIwN2ViZjIwIiwiYWRtaW4iOiI2MGU3ZGVkMmEyY2RhNDQyZmZhYTQ4NzAiLCJ1c2VyX2FwcF9jb25maWciOm51bGx9LCJhZG1pbiI6IjYwZTdkZWQyYTJjZGE0NDJmZmFhNDg3MCIsInVjYXRlZ29yeSI6IjYwYzcxYzRhYWQ4ZDhmNDMyMDdlYmYyMSIsInV0eXBlIjp7InN0YXR1cyI6MSwiY3JlYXRlZF9hdCI6IjIwMjItMTEtMDdUMDc6MzA6MjUuMDU5WiIsInVwZGF0ZWRfYXQiOiIyMDIyLTExLTA3VDA3OjMwOjI1LjA1OVoiLCJfaWQiOiI2MzZmMGEzYTI4NmVlZTYwNDMxYWM5MTIiLCJuYW1lIjoiQmx1ZXRvb3RoIFVzZXIiLCJjYXRlZ29yeV9pZCI6IjYwYzcxYzRhYWQ4ZDhmNDMyMDdlYmYyMSIsInByaXZpbGVnZXMiOltdLCJfX3YiOjB9LCJfX3YiOjAsInVzZXJfYXBwX2NvbmZpZyI6bnVsbCwiaWF0IjoxNjgxMTAxODI3LCJleHAiOjE2ODExODgyMjd9.gnEgONDmTLJ_Nk7_HOn9ZCGBEwgO8PQ7JT04SxcqIuI""
+}",Providing with the valid username.,Success,Success
+2,,,"{""u"":""saurabh.sing@enginecal.com"",""p"":""123456""}","{
+    ""success"": false,
+    ""errorCode"": ""1002"",
+    ""errorMessage"": ""Invalid Username or Password!""
+}",Providing invalid email id but providing valid password. Giving response 200 OK.,Success,Success
+3,,,"{""u"":""saurabh.singh@enginecal.com"",""p"":""23456""}","{
+    ""success"": false,
+    ""errorCode"": ""1002"",
+    ""errorMessage"": ""Invalid Username or Password!""
+}",Providing valid email id but wrong password. 200 OK response is recieved.,Success,Success
+4,,,"{""u"":""saurabh.sing@enginecal.com"",""p"":""23456""}","{
+    ""success"": false,
+    ""errorCode"": ""1002"",
+    ""errorMessage"": ""Invalid Username or Password!""
+}",Providing invalid email id and invalid password. 200 OK is recieved.,Success,Success
+5,forgot password,core/v1/bike-intell/forgetpass,"{""email"":""test@enginecal.com"",""password"":""123@Ecal""}","{
+    ""status"": true,
+    ""message"": ""Password has been updated successfully!!!""
+}",Getting response 200 OK.,False ,Success
+6,New User Registration,core/v1/bike-intell/profile,"{""user"": {""deviceid"": ""50000411"",""name"": ""Rahul"",""password"": ""1234ec"", ""email"": ""somewhere@example.com"",""mobile"": ""+91 9876543210"",""emergency_no1"": ""+91 1234567890"",""emergency_no2"": ""+91 1234567890""}}","{
+    ""success"": true,
+    ""successMessage"": ""Registration done successfully!""
+}",When provided with a new User it gives response as 201 Created. Its needed to be changed to status 200 OK.,fixed,Success
+7,,,"{""user"": {""deviceid"": ""50000410"",""name"": ""John Smith"",""password"": ""123ec"", ""email"": ""someone@example.com"",""mobile"": ""+91 1234567890"",""emergency_no1"": ""+91 1234567890"",""emergency_no2"": ""+91 1234567890""}}","{
+    ""success"": false,
+    ""successMessage"": ""Device already exists""
+}",When providing user which has already been register it is giving 404 Bad request as response.,fixed,Success
+8,,,"{""user"": {""deviceid"": """",""name"": ""Rahul"",""password"": ""1234ec"", ""email"": ""somewhere@example.com"",""mobile"": ""+91 9876543210"",""emergency_no1"": ""+91 1234567890"",""emergency_no2"": ""+91 1234567890""}}","{
+    ""success"": false,
+    ""errorMessage"": ""Please provide all the necessary fields name, mobile, email, password, deviceid""
+}",When a field is removed from the input it provides with 400 Bad Response.,fixed,Success
+9,Check Activation Code Expiry (New Activation Code),core/v1/bike-intell/valcode,"{""acode"":""Sa1234"",""mac"":""56d788cdc641eeA"",""uby"":""saurabh.singh@enginecal.com""}","{
+    ""success"": true,
+    ""message"": ""Activation code restored successfully!"",
+    ""strtDate"": ""17-01-2023"",
+    ""expDate"": ""17-01-2028"",
+    ""expStatus"": false
+}",Correct data has been passed providing with 200 OK response.,Success,Success
+10,,,"{""acode"":""Sa124"",""mac"":""56d788cdc641eeA"",""uby"":""saurabh.singh@enginecal.com""}","{
+    ""success"": false,
+    ""errorCode"": ""1002"",
+    ""errorMessage"": ""Invalid Activation Code!""
+}","Provided with wrong activation code, giving response 200 OK.",Success,Success
+11,,,"{""acode"":"""",""mac"":""56d788cdc641eeA"",""uby"":""saurabh.singh@enginecal.com""}","{
+    ""success"": false,
+    ""errorMessage"": ""Please provide all the fields necessary 'acode', 'mac', 'uby'.""
+}","Removed the activation code, giving response 200 OK.",Success,Success
+12,Get User Statistics by Drive,core/v1/bike-intell/statistics,"{""devID"":""50000406"",""type"":""drive"",""driveno"":""6""}","<!DOCTYPE html>
+<html lang=""en"">
+
+<head>
+	<meta charset=""utf-8"">
+	<title>Error</title>
+</head>
+
+<body>
+	<pre>Cannot POST /v1/bike-intell/statistics</pre>
+</body>
+
+</html>",Providing with 404 Not Found.,fixed,Success
+13,Drive Score,core/v1/bike-intell/statistics,"{""devID"":""50000406"",""type"":""drive"",""driveno"":""6""}"," <!DOCTYPE html>
+<html lang=""en"">
+
+<head>
+	<meta charset=""utf-8"">
+	<title>Error</title>
+</head>
+
+<body>
+	<pre>Cannot POST /v1/bike-intell/statistics</pre>
+</body>
+
+</html>",Providing correct data but getting 404 Not Found response.,,Success
+14,Vehicle Model,core/v1/bike-intell/veh_model,"{""mfd"":""Aprilia_IND_B""}","{
+    ""success"": true,
+    ""model"": [
+        ""Caponord"",
+        ""Dorsoduro 750 "",
+        ""Dorsoduro 900"",
+        ""RS4"",
+        ""RSV4"",
+        ""SR125"",
+        ""SR150"",
+        ""SR160"",
+        ""SRV"",
+        ""SXR 125"",
+        ""Shiver 700"",
+        ""Shiver 900"",
+        ""Storm 125"",
+        ""Tuono""
+    ]
+}",Provided correct data giving 200 OK response.,Success,Success
+15,,,"{""mfd"":""Aprilia_IND""}","{
+    ""success"": false,
+    ""errorCode"": ""1002"",
+    ""errorMessage"": ""Manufacturer is not in the list!""
+}","Removed the _B to check the response, giving 200 OK response.",Success,Success
+16,,,"{""mfd"":""""}","{
+    ""success"": false,
+    ""errorMessage"": ""Please provide the field required 'mfd'.""
+}",Didn't pass any data giving the following message with 200 OK response.,Success,Success
+17,Vehicle Variant and other Specs,core/v1/bike-intell/veh_spec,"{""mfd"":""Hyundai_IND_C"",""model"":""Eon"",""fuel"":""Diesel""}","{
+    ""success"": true,
+    ""model"": [
+        {
+            ""fuelType"": ""Petrol"",
+            ""varients"": ""Magnum+"",
+            ""engineCapacity"": ""0.8"",
+            ""bodyType"": ""Mini Hatch-back""
+        },
+        {
+            ""fuelType"": ""Petrol"",
+            ""varients"": ""Kappa Era+"",
+            ""engineCapacity"": ""1"",
+            ""bodyType"": ""Mini Hatch-back""
+        },
+        {
+            ""fuelType"": ""Petrol"",
+            ""varients"": ""Kappa Magna+"",
+            ""engineCapacity"": ""1"",
+            ""bodyType"": ""Mini Hatch-back""
+        },],}",Provided with all data giving 200 OK response.,Success,Success
+18,,,"{""mfd"":""Hyundai_IND_C"",""model"":"""",""fuel"":""Diesel""}","{
+    ""success"": false,
+    ""errorMessage"": ""Please provide the fields required 'mfd','model'.""
+}",When no model is passed the following message shows up with 200 OK response.,Success,Success
+19,New Vehicle Profile,core/v1/bike-intell/vehicle,"{""veh_basic"": {""deviceid"": ""50000410"",""veh_registration"": ""KA 01 ZZ 99979"",""veh_manufacturer"": ""Aprilia_IND_B"",""veh_model"": ""SR125"",""veh_varient"": ""BS6"",""fuel_type"": ""Petrol"",""mfg_year"": ""2015"",""engine_capacity"": ""0.125"",""odo"":""123""}}","{
+    ""success"": true,
+    ""message"": ""Data updated successfully!""
+}",Th data is passed giving 200 OK response.,Success,Success
+20,,,"{""veh_basic"": {""deviceid"": ""50000410"",""veh_registration"": """",""veh_manufacturer"": ""Aprilia_IND_B"",""veh_model"": ""SR125"",""veh_varient"": ""BS6"",""fuel_type"": ""Petrol"",""mfg_year"": ""2015"",""engine_capacity"": ""0.125"",""odo"":""123""}}","{
+    ""success"": false,
+    ""errorMessage"": ""Please provide the fields required 'deviceid' 'veh_registration' 'veh_manufacturer' 'veh_model' 'veh_varient' 'fuel_type' 'mfg_year' 'engine_capacity' 'odo' with valid values.""
+}",When the vehicle registration number is removed it gives the following message with 200 OK response.,Success,Success
+21,Get Calibration Value,core/v1/bike-intell/getcalvalues,"{""devID"":""50000410""}","{
+    ""status"": true,
+    ""Eng_eff_C"": ""21"",
+    ""Vol_eff_C"": ""97"",
+    ""Eff_RPM_Limit1_C"": ""2000"",
+    ""Eff_RPM_Limit2_C"": ""3600"",
+    ""Eff_RPM_Limit3_C"": ""5700"",
+    ""Eff_RPM_Limit4_C"": ""6200"",
+    ""Eff_RPM_Limit5_C"": ""7700"",
+    ""IC_Status_C"": ""0"",
+    ""TC_Status_C"": ""No"",
+    ""Injection_Type_C"": ""Indirect"",
+    ""VVT_Status_C"": ""0"",
+    ""Fact_Fuel_Run_C"": ""0"",
+    ""Fact_Fuel_Idle_C"": ""0"",
+    ""MAP_Valid_C"": ""1"",
+    ""MAF_Valid_C"": ""0"",
+    ""VolEff_Eload_1_10_RPMLimit1_C"": ""74"",
+    ""VolEff_Eload_1_10_RPMLimit2_C"": ""75"",
+    ""VolEff_Eload_1_10_RPMLimit3_C"": ""67"",
+    ""VolEff_Eload_1_10_RPMLimit4_C"": ""54"",
+    ""VolEff_Eload_1_10_RPMLimit5_C"": ""52"",
+    ""VolEff_Eload_11_20_RPMLimit1_C"": ""75"",
+    ""VolEff_Eload_11_20_RPMLimit2_C"": ""76"",
+    ""VolEff_Eload_11_20_RPMLimit3_C"": ""68"",
+    ""VolEff_Eload_11_20_RPMLimit4_C"": ""58"",
+    ""VolEff_Eload_11_20_RPMLimit5_C"": ""56"",
+    ""VolEff_Eload_21_30_RPMLimit1_C"": ""76"",
+    ""VolEff_Eload_21_30_RPMLimit2_C"": ""77"",
+    ""VolEff_Eload_21_30_RPMLimit3_C"": ""69"",
+    ""VolEff_Eload_21_30_RPMLimit4_C"": ""62"",
+    ""VolEff_Eload_21_30_RPMLimit5_C"": ""59"",
+    ""VolEff_Eload_31_40_RPMLimit1_C"": ""77"",
+    ""VolEff_Eload_31_40_RPMLimit2_C"": ""78"",
+    ""VolEff_Eload_31_40_RPMLimit3_C"": ""70"",
+    ""VolEff_Eload_31_40_RPMLimit4_C"": ""67"",
+    ""VolEff_Eload_31_40_RPMLimit5_C"": ""64"",
+    ""VolEff_Eload_41_50_RPMLimit1_C"": ""78"",
+    ""VolEff_Eload_41_50_RPMLimit2_C"": ""79"",
+    ""VolEff_Eload_41_50_RPMLimit3_C"": ""75"",
+    ""VolEff_Eload_41_50_RPMLimit4_C"": ""72"",
+    ""VolEff_Eload_41_50_RPMLimit5_C"": ""67"",}",Provided with device id it gives the requested data with 200 OK response.,Success,Success
+22,,,"{""devID"":""""}","{
+    ""success"": false,
+    ""errorCode"": 1002,
+    ""errorMessage"": ""Invalid Device ID!""
+}",When empty device id is passed it gives 200 OK response with the following message.,Success,Success
+23,Monitor flag,core/v1/bike-intell/monitor_flag,"{""devID"":""50000410""}","{
+    ""success"": true,
+    ""flag"": 0,
+    ""upcalib"": 0,
+    ""driveno"": """"
+}",Provided with the device id gives response as 200 OK.,Success,Success
+24,,,"{""devID"":""""}","{
+    ""success"": false,
+    ""message"": {}
+}",No data passed in device id gives 400 Bad request.,Success,Success
+25,User Logout,core/v1/bike-intell/logout,"{""u"":""saurabh.singh@enginecal.com""}","{
+    ""success"": true,
+    ""message"": ""User logged out successfully!""
+}",Gives 200 OK response.,Success,Success
+26,File upload,event/v1/bike-intell/fileupload,csv file is passed in the form-data ,"{
+    ""success"": true,
+    ""successMessage"": ""Data has been updated successfully""
+}",When the csv file is passed it gives response 200 OK.,Success,Success

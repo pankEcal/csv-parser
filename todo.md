@@ -1,0 +1,2 @@
+- change xlsx to csv
+- create dynamic query to get particular column value
